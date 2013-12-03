@@ -176,6 +176,7 @@
     <Compile Include="Net\HttpVerb.cs" />
     <Compile Include="Net\ReadyState.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
+    <Compile Include="Net\XmlHttpRequestProgressEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="..\..\ScriptSharp.cs">
       <Link>Properties\ScriptSharp.cs</Link>

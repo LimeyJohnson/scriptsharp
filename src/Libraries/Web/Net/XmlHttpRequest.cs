@@ -24,6 +24,8 @@ namespace System.Net {
             }
         }
 
+           
+
         [ScriptField]
         public ReadyState ReadyState {
             get {
@@ -58,6 +60,25 @@ namespace System.Net {
             get {
                 return null;
             }
+        }
+
+        [ScriptField, ScriptName("onprogress")]
+        public Action<XmlHttpRequestProgressEvent> OnProgress
+        {
+            get { return null; }
+            set { }
+        }
+        [ScriptField, ScriptName("onload")]
+        public Action<XmlHttpRequestProgressEvent> OnLoad
+        {
+            get { return null; }
+            set { }
+        }
+        [ScriptField, ScriptName("onerror")]
+        public Action<XmlHttpRequestProgressEvent> OnError
+        {
+            get { return null; }
+            set { }
         }
 
         public void Abort() {
