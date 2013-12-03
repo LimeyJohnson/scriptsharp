@@ -54,7 +54,7 @@ namespace System.Html.Data.Files {
             }
         }
 
-        [ScriptName("onload")]
+        [ScriptName("onload"), ScriptField]
         public Action<FileProgressEvent> OnLoad {
             get {
                 return null;
