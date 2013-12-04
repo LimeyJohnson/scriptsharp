@@ -61,6 +61,18 @@ namespace System.Net {
                 return null;
             }
         }
+        [ScriptField]
+        public XMLHttpRequestResponseType ResponseType
+        {
+            get
+            {
+                return XMLHttpRequestResponseType.Text;
+            }
+            set
+            {
+
+            }
+        }
 
         [ScriptField, ScriptName("onprogress")]
         public Action<XmlHttpRequestProgressEvent> OnProgress

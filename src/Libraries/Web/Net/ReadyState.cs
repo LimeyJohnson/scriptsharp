@@ -9,19 +9,22 @@ using System.Xml;
 
 namespace System.Net {
 
+    
+    
     [ScriptIgnoreNamespace]
     [ScriptImport]
     [ScriptConstants]
     public enum ReadyState {
 
+        //Ready States can be found here: http://www.w3.org/TR/XMLHttpRequest/#states
         Uninitialized = 0,
 
         Open = 1,
 
-        Sent = 2,
+        HeadersReceived = 2,
 
         Receiving = 3,
 
-        Loaded = 4
+        Done = 4
     }
 }
