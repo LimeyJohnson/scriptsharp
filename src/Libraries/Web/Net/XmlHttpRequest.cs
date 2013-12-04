@@ -12,7 +12,8 @@ namespace System.Net {
     [ScriptIgnoreNamespace]
     [ScriptImport]
     [ScriptName("XMLHttpRequest")]
-    public sealed class XmlHttpRequest {
+    public sealed class XmlHttpRequest : XmlHttpRequestEventTarget
+    {
 
         [ScriptField]
         [ScriptName("onreadystatechange")]
@@ -62,35 +63,27 @@ namespace System.Net {
             }
         }
         [ScriptField]
-        public XMLHttpRequestResponseType ResponseType
+        public XmlHttpRequestResponseType ResponseType
         {
             get
             {
-                return XMLHttpRequestResponseType.Text;
+                return XmlHttpRequestResponseType.Text;
             }
             set
             {
 
             }
         }
-
-        [ScriptField, ScriptName("onprogress")]
-        public Action<XmlHttpRequestProgressEvent> OnProgress
+        [ScriptField]
+        public XmlHttpRequestUpload Upload
         {
-            get { return null; }
-            set { }
-        }
-        [ScriptField, ScriptName("onload")]
-        public Action<XmlHttpRequestProgressEvent> OnLoad
-        {
-            get { return null; }
-            set { }
-        }
-        [ScriptField, ScriptName("onerror")]
-        public Action<XmlHttpRequestProgressEvent> OnError
-        {
-            get { return null; }
-            set { }
+            get
+            {
+                return null;
+            }
+            set
+            {
+            }
         }
 
         public void Abort() {

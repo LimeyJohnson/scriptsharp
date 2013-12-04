@@ -15,7 +15,7 @@ namespace System.Net
     [ScriptIgnoreNamespace]
     [ScriptImport]
     [ScriptConstants(UseNames=true)]
-    public enum XMLHttpRequestResponseType
+    public enum XmlHttpRequestResponseType
     {
 
         //http://www.w3.org/TR/XMLHttpRequest/#xmlhttprequestresponsetype

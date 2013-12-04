@@ -173,8 +173,10 @@
     <Compile Include="Html\Media\Filters\VisualTransitionState.cs" />
     <Compile Include="Html\Window.cs" />
     <Compile Include="Html\WindowInstance.cs" />
+    <Compile Include="Net\XmlHttpRequestUpload.cs" />
+    <Compile Include="Net\XmlHttpRequestEventTarget.cs" />
     <Compile Include="Net\HttpVerb.cs" />
-    <Compile Include="Net\XMLHttpRequestResponseType.cs" />
+    <Compile Include="Net\XmlHttpRequestResponseType.cs" />
     <Compile Include="Net\ReadyState.cs" />
     <Compile Include="Net\XmlHttpRequest.cs" />
     <Compile Include="Net\XmlHttpRequestProgressEvent.cs" />
