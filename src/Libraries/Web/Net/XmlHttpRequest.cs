@@ -120,7 +120,8 @@ namespace System.Net {
 
         public void Send(string body) {
         }
-
+        public void Send(object body) {
+        }
         public void SetRequestHeader(string name, string value) {
         }
     }
