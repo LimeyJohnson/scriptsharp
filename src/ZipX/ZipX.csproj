@@ -20,6 +20,7 @@
     <None Include="Packages\FxCop\ScriptSharp.PlaceHolder.txt" />
     <None Include="Packages\Lib.BingMaps.nuspec" />
     <None Include="Packages\Lib.HTML.nuspec" />
+    <None Include="Packages\Lib.Facebook.nuspec" />
     <None Include="Packages\Lib.jQuery.nuspec" />
     <None Include="Packages\Lib.jQuery.UI.nuspec" />
     <None Include="Packages\Lib.jQuery.History.nuspec" />
@@ -74,6 +75,7 @@
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Testing.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\FxCop.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.HTML.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
+	<Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Facebook.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.UI.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.History.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
@@ -88,14 +90,12 @@
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Node.Neo4j.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Node.Azure.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Runtime.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
-
     <Zip ZipLevel="9" Files="@(ItemClass)" ZipFileName="$(OutputPath)ItemTemplates\Script%2523\Class.zip" WorkingDirectory="ItemTemplates\Class" />
     <Zip ZipLevel="9" Files="@(ItemPage)" ZipFileName="$(OutputPath)ItemTemplates\Script%2523\Page.zip" WorkingDirectory="ItemTemplates\Page" />
     <Zip ZipLevel="9" Files="@(ItemJQueryPage)" ZipFileName="$(OutputPath)ItemTemplates\Script%2523\jQueryPage.zip" WorkingDirectory="ItemTemplates\jQueryPage" />
     <Zip ZipLevel="9" Files="@(ItemJQueryPlugin)" ZipFileName="$(OutputPath)ItemTemplates\Script%2523\jQueryPlugin.zip" WorkingDirectory="ItemTemplates\jQueryPlugin" />
     <Zip ZipLevel="9" Files="@(ItemResource)" ZipFileName="$(OutputPath)ItemTemplates\Script%2523\Resource.zip" WorkingDirectory="ItemTemplates\Resource" />
     <Zip ZipLevel="9" Files="@(ItemTestClass)" ZipFileName="$(OutputPath)ItemTemplates\Script%2523\TestClass.zip" WorkingDirectory="ItemTemplates\TestClass" />
-
     <Zip ZipLevel="9" Files="@(ProjectHTMLApp)" ZipFileName="$(OutputPath)ProjectTemplates\Script%2523\HTMLApplication.zip" WorkingDirectory="ProjectTemplates\HTMLApplication" />
     <Zip ZipLevel="9" Files="@(ProjectHTMLModule)" ZipFileName="$(OutputPath)ProjectTemplates\Script%2523\HTMLModule.zip" WorkingDirectory="ProjectTemplates\HTMLModule" />
     <Zip ZipLevel="9" Files="@(ProjectJQueryApp)" ZipFileName="$(OutputPath)ProjectTemplates\Script%2523\jQueryApplication.zip" WorkingDirectory="ProjectTemplates\jQueryApplication" />
