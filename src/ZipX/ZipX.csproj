@@ -19,9 +19,19 @@
     <None Include="Packages\FxCop\Install.ps1" />
     <None Include="Packages\FxCop\ScriptSharp.PlaceHolder.txt" />
     <None Include="Packages\Lib.BingMaps.nuspec" />
+    <None Include="Packages\Lib.AppsForOffice.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Packages\Lib.LiveApi.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Packages\Lib.HTML.nuspec" />
-    <None Include="Packages\Lib.Facebook.nuspec" />
-    <None Include="Packages\Lib.jQuery.nuspec" />
+    <None Include="Packages\Lib.Facebook.nuspec">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Packages\Lib.jQuery.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Packages\Lib.jQuery.UI.nuspec" />
     <None Include="Packages\Lib.jQuery.History.nuspec" />
     <None Include="Packages\Lib.jQuery.Templating.nuspec" />
@@ -74,14 +84,16 @@
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Core.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Testing.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\FxCop.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
+    <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.AppsForOffice.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.HTML.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
-	<Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Facebook.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
+    <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Facebook.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.UI.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.History.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.Templating.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.jQuery.Validation.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Knockout.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
+    <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.LiveApi.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.BingMaps.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Node.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Node.Express.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />

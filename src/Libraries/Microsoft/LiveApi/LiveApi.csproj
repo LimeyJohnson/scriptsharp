@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F90999CE-6694-4CF2-8742-2BABB9B74529}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <FileAlignment>512</FileAlignment>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LiveApi</RootNamespace>
+    <AssemblyName>Script.LiveApi</AssemblyName>
+    <NoStdLib>True</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1591, 0661, 0660, 1684</NoWarn>
+    <DocumentationFile>bin\Debug\Script.LiveApi.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>..\..\..\..\bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoWarn>1591, 0661, 0660, 1684</NoWarn>
+    <DocumentationFile>..\..\..\..\bin\Release\Script.LiveApi.xml</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Objects\Folder.cs" />
+    <Compile Include="Options\CreateFolderOptions.cs" />
+    <Compile Include="Responses\FileListResponse.cs" />
+    <Compile Include="Responses\Response.cs" />
+    <Compile Include="Responses\ApiResponse.cs" />
+    <Compile Include="Responses\LoginResponse.cs" />
+    <ScriptInfo Include="Properties\ScriptInfo.txt" />
+    <Compile Include="Objects\Promise.cs" />
+    <Compile Include="Options\FileDialogOptions.cs" />
+    <Compile Include="Options\LoginOptions.cs" />
+    <Compile Include="Options\InitOptions.cs" />
+    <Compile Include="Options\UIOptions.cs" />
+    <Compile Include="Options\ApiOptions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LiveApi.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Core\CoreLib\CoreLib.csproj">
+      <Project>{36d4b098-a21c-4725-acd3-400922885f38}</Project>
+      <Name>CoreLib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Web\Web.csproj">
+      <Project>{3681a9a8-fc40-4125-b842-7775713c8dce}</Project>
+      <Name>Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="@(ScriptInfo)" DestinationFiles="$(OutputPath)$(AssemblyName).txt" />
+  </Target>
+</Project>
