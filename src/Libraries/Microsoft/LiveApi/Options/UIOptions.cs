@@ -31,7 +31,7 @@ namespace Live
             }
         }
         [ScriptField]
-        public string brand
+        public string Brand
         {
             get
             {
@@ -41,7 +41,31 @@ namespace Live
             {
             }
         }
-        public Action<LoginResponse> onloggedin;
+        [ScriptField]
+        public string Mode
+        {
+            get
+            {
+                return null;
+            }
+            set
+            {
+            }
+        }
+        [ScriptField]
+        public string Select
+        {
+            get
+            {
+                return null;
+            }
+            set
+            {
+            }
+        }
+        public Action<LoginResponse> Onloggedin;
+        public Action<LoginResponse> Onselected;
+        public Action<LoginResponse> Onerror;
     }
     
 }
