@@ -14,7 +14,7 @@ namespace Live
         public string[] Scope{get{return null;} set {}}
         public string response_type;
         public bool logging;
-
+        public bool secure_cookie;
     }
     
 }

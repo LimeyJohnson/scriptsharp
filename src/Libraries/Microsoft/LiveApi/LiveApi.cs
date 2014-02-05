@@ -17,7 +17,7 @@ namespace Live
         public extern static Promise FileDialog(FileDialogOptions options);
         [ScriptName(PreserveCase=true)]
         public static EventObject Event;
-        public extern static PromiseGeneric<LoginResponse> GetLoginStatus();
+        public extern static PromiseGeneric<LoginResponse> GetLoginStatus(bool force);
     }
     [ScriptImport, ScriptIgnoreNamespace]
     public class EventObject

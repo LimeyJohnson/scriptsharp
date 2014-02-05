@@ -8,12 +8,7 @@ namespace Live
     public class LoginOptions
     {
         public LoginOptions(params object[] nameValuePairs) { }
-        public extern LoginScope Scope { set; }
-    }
-    [ScriptImport, ScriptIgnoreNamespace, ScriptName("")]
-    public enum LoginScope
-    {
-        [ScriptName("wl.skydrive_update")]
-        SkydriveUpdate,
+        public string[] Scope;
+        public string Redirect_uri;
     }
 }
