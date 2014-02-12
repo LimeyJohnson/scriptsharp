@@ -18,13 +18,14 @@ namespace D3Api
         public static SelectObject Select(string selector) { return null; }
         public static ScaleObject Scale;
     }
-    [ScriptImport, ScriptIgnoreNamespace]
+    [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
     public class Node
     {
         public string Name;
         public int Group;
+        public string ID;
     }
-    [ScriptImport, ScriptIgnoreNamespace]
+    [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
     public class Link
     {
         public int Source;
@@ -44,6 +45,8 @@ namespace D3Api
         public SelectObject Data(Node[] nodes) { return null; }
         public SelectObject Call(Action action) { return null; }
         public SelectObject Text(StringDelegate callback) { return null; }
+
+        public SelectObject On(string eventName, Action<Dictionary> callback) { return null; }
     }
     [ScriptImport, ScriptIgnoreNamespace]
     public class ForceObject

@@ -123,6 +123,7 @@ namespace FreindsLibrary
         public string id;
         public string first_name;
         public string last_name;
+        public string name;
         public string email;
         public string sex;
         public string birthday_date;
