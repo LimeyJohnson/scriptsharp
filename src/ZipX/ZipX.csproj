@@ -22,6 +22,9 @@
     <None Include="Packages\Lib.AppsForOffice.nuspec">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Packages\Lib.D3.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Packages\Lib.LiveApi.nuspec">
       <SubType>Designer</SubType>
     </None>
@@ -84,6 +87,7 @@
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Core.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Testing.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\FxCop.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
+    <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.D3.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.AppsForOffice.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.HTML.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />
     <Exec Command="$(ProjectDir)..\..\tools\bin\nuget pack $(ProjectDir)Packages\Lib.Facebook.nuspec -OutputDirectory $(OutputPath)Packages -NoPackageAnalysis" />

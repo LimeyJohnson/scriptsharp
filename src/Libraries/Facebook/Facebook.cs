@@ -100,7 +100,7 @@ namespace FreindsLibrary
         public string name;
         public string id;
         public string error;
-        public Dictionary[] data;
+        public object data;
     }
     [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
     public sealed class QueryResponse
