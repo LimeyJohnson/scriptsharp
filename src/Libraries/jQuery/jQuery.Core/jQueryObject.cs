@@ -718,6 +718,19 @@ namespace jQueryApi {
         }
 
         /// <summary>
+        /// Sets the specified CSS attribute value to the specified value on
+        /// the set of matched elements.
+        /// </summary>
+        /// <param name="attributeName">The name of the CSS attribute to set.</param>
+        /// <param name="value">The value of the CSS attribute.</param>
+        /// <returns>The current jQueryObject.</returns>
+        [ScriptName("css")]
+        public jQueryObject CSS(string attributeName, int value)
+        {
+            return null;
+        }
+        
+        /// <summary>
         /// Sets the specified CSS attribute value to the values returned by the
         /// specified function on the set of matched elements.
         /// </summary>

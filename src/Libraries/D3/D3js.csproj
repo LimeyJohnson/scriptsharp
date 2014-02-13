@@ -32,7 +32,9 @@
   </PropertyGroup>
   <ItemGroup>
     <ScriptInfo Include="Properties\ScriptInfo.txt" />
+    <Compile Include="BehaviorObject.cs" />
     <Compile Include="D3.cs" />
+    <Compile Include="EventObject.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

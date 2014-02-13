@@ -17,6 +17,9 @@ namespace D3Api
         public static LayoutObject Layout;
         public static SelectObject Select(string selector) { return null; }
         public static ScaleObject Scale;
+        public static EventObject Event;
+        public static BehaviorObject Behavior;
+        
     }
     [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
     public class Node
@@ -38,12 +41,14 @@ namespace D3Api
         public SelectObject Append(string append) { return null; }
         public SelectObject Attr(string attribute, object value) { return null; }
         public SelectObject Attr(string attribute, IntDelegate action) { return null; }
+        public SelectObject Attr(string attribute, StringDelegate action) { return null; }
         public SelectObject SelectAll(string selector) { return null; }
         public SelectObject Enter() { return null; }
         public SelectObject Style(string style, IntDelegate callback) { return null; }
         public SelectObject Data(Link[] links) { return null; }
         public SelectObject Data(Node[] nodes) { return null; }
         public SelectObject Call(Action action) { return null; }
+        public SelectObject Call(BehaviorObject obj) { return null; }
         public SelectObject Text(StringDelegate callback) { return null; }
 
         public SelectObject On(string eventName, Action<Dictionary> callback) { return null; }
@@ -68,6 +73,11 @@ namespace D3Api
     public class ScaleObject
     {
         public int[] Catagory20() { return null; }
+        public ScaleObject Linear() { return null; }
+        public ScaleObject Domain(int[] domain) { return null; }
+        public ScaleObject Range(int[] range) { return null; }
+       
+
     }
 
 }
