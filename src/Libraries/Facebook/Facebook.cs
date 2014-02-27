@@ -9,6 +9,7 @@ namespace FreindsLibrary
     public static class Facebook
     {
         public delegate void ApiDelegate(ApiResponse response);
+        public delegate void MultiApiDelegate(ApiResponse[] response);
         public delegate void QueryDelgate(QueryResponse[] response);
         //public delegate void LoginDelegate(LoginResponse response);
         public delegate void UIDelegate(UIResponse response);
@@ -18,6 +19,7 @@ namespace FreindsLibrary
         public static void api(string apiCall, ApiDelegate response) { }
         public static void api(string apiCall, ApiOptions options, ApiDelegate response) { }
         public static void api(string apiCall, string noun, ApiOptions options, ApiDelegate response) { }
+        public static void api(string apiCall, string noun, ApiOptions options, MultiApiDelegate response) { }
         public static void api(ApiOptions options, QueryDelgate response) { }
         public static void login(Action<LoginResponse> d) { }
         public static void login(Action<LoginResponse> d, LoginOptions options) { }
@@ -87,6 +89,8 @@ namespace FreindsLibrary
         public string method;
         public string Q;
         public Queries queries;
+        public Dictionary[] batch;
+        public bool include_headers;
     }
     [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
     public sealed class Queries
@@ -95,18 +99,22 @@ namespace FreindsLibrary
         public string friendsLimit;
         public string friendsoffriends;
     }
-    public sealed class ApiResponse
+    public class ApiResponse
     {
         public string name;
         public string id;
-        public string error;
+        public Error error;
         public object data;
+        [ScriptName("data")]
+        public Dictionary[] dataDict;
+        public object[] body;
     }
     [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
-    public sealed class QueryResponse
+    public sealed class QueryResponse:ApiResponse
     {
         public MultiQueryResults[] fql_result_set;
     }
+    
     [ScriptImport, ScriptIgnoreNamespace, ScriptName("Object")]
     public sealed class MultiQueryResults
     {

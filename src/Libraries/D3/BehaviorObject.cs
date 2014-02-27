@@ -14,6 +14,7 @@ namespace D3Api
 
         public BehaviorObject On(string eventType, Action<Dictionary> callback) { return null; }
         public BehaviorObject ScaleExtent(int[] scale) { return null; }
+        public BehaviorObject ScaleExtent(double[] scale) { return null;}
 
     }
 }

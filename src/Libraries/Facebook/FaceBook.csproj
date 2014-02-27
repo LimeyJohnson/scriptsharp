@@ -31,6 +31,7 @@
     <DocumentationFile>..\..\..\bin\Release\Script.Facebook.xml</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Error.cs" />
     <Compile Include="Requests.cs" />
     <ScriptInfo Include="Properties\ScriptInfo.txt" />
     <Compile Include="Facebook.cs" />
